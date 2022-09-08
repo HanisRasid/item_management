@@ -5,7 +5,21 @@ name: Maven Package
 
 on:
   push:
-    branches: [dev]
+    branches:
+      -dev
+      - update_item
+      - get_item_list
+      - get_item
+      - create_item
+      - delete_item
+  pull_request:
+    branches:
+      -dev
+      - update_item
+      - get_item_list
+      - get_item
+      - create_item
+      - delete_item
   release:
     types: [created]
 
