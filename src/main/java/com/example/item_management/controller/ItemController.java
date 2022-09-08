@@ -20,4 +20,8 @@ public class ItemController {
     public List<Item> getAllItems(){
         return ItemDao.getAllItems();
     }
+    @PutMapping("/item/{id}")
+    public Item updateItem(@PathVariable String id, @RequestBody Item item){
+        return ItemDao.updateItem(id, item);
+    }
 }
