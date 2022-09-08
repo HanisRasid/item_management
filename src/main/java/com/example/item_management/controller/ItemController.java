@@ -10,4 +10,8 @@ public class ItemController {
     public Item addItem(@RequestBody Item newItem){
         return ItemDao.addItem(newItem);
     }
+    @GetMapping("/item/item{id}")
+    public Item getItem(@PathVariable double id){
+        return ItemDao.getItem(id);
+    }
 }
