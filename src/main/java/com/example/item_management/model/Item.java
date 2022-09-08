@@ -1,9 +1,7 @@
-package com.example.item_management;
+package com.example.item_management.model;
 
 public class Item {
-    public Item(){
 
-    }
     private String id;
     private String name;
     private String desc;
