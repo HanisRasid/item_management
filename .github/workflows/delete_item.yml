@@ -1,10 +1,10 @@
-name: Get Item List Workflow
+name: Delete Item Workflow
 
 on:
   push:
-    branches: [ "get_item_list" ]
+    branches: [ "delete_item" ]
   pull_request:
-    branches: [ "get_item_list" ]
+    branches: [ "delete_item" ]
 
 jobs:
   build:
