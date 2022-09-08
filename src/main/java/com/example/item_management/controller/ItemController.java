@@ -24,4 +24,8 @@ public class ItemController {
     public Item updateItem(@PathVariable String id, @RequestBody Item item){
         return ItemDao.updateItem(id, item);
     }
+    @DeleteMapping("/item/delete{id}")
+    public Item deleteItem(@PathVariable double id){
+        return ItemDao.deleteItem(id);
+    }
 }
