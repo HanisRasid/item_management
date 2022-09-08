@@ -16,7 +16,7 @@ public class ItemDao {
     public static List<Item> getAllItems(){
         return new ArrayList<>(items.values());
     }
-    public static Item getItemDetails(double itemId){
+    public static Item getItem(double itemId){
         return items.get(itemId);
     }
     public static Item updateItem(String itemId, Item item){
