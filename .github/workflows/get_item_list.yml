@@ -1,0 +1,23 @@
+name: Get Item List Workflow
+
+on:
+  push:
+    branches: [ "get_item_list" ]
+  pull_request:
+    branches: [ "get_item_list" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
